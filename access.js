@@ -351,7 +351,7 @@ const chatMessages = [
 Yêu cầu định dạng:
 - Mỗi ý xuống dòng riêng.
 - Ưu tiên gạch đầu dòng (-) và đánh số khi cần.
-- Nếu hợp lý: chia mục TÓM TẮT / PHÁT HIỆN / KHUYẾN NGHỊ / CẢNH BÁO.
+- Nếu hợp lý: chia mục TÓM TẮT / PHÁT HIỆN / KHUYẾN NGHỊ / CẢNH BÁO / THÔNG TIN THIẾT BỊ TRUY CẬP.
 - Tránh viết một đoạn dài liền nhau.`,
   },
 ];
