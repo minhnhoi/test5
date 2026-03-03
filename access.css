@@ -132,9 +132,17 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
+  /* 50/50 split: Mongo panel (left) + ChatDMIN (right) */
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
   padding: 16px;
+}
+
+/* keep both panels visually aligned in height on wide screens */
+@media (min-width: 981px) {
+  .panel {
+    min-height: calc(100vh - 110px);
+  }
 }
 
 .panel {
