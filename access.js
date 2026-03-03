@@ -151,10 +151,7 @@ function renderRows(docs, collectionName) {
     btnView.onclick = (ev) => {
       ev.stopPropagation();
       els.jsonDetail.textContent = pretty();
-
-      // giữ như cũ: chỉ show ở "Chi tiết", không mở overlay
-      const box = document.querySelector(".json-view");
-      if (box) box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      openOverlay(`${collectionName} • ${doc._id}`, pretty());
     };
 
     const btnCopy = document.createElement("button");
