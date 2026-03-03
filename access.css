@@ -219,6 +219,9 @@ table {
   width: 100%;
   border-collapse: collapse;
   font-size: 18px;
+
+  /* ✅ khóa layout để preview không kéo ngang bảng */
+  table-layout: fixed;
 }
 thead th {
   position: sticky;
@@ -242,10 +245,14 @@ tbody tr:hover td {
 }
 
 .preview {
+  /* ✅ chỉ hiển thị demo 1 dòng */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 600px;
+
+  /* ✅ cho nó chiếm hết cột preview */
+  max-width: none;
+  width: 100%;
 }
 
 .json-view {
