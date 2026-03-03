@@ -369,7 +369,7 @@ code {
 }
 
 .overlay-card {
-  width: min(980px, 100%);
+  width: min(680px, 92vw); /* <-- giảm từ 980 xuống 680 */
   max-height: 86vh;
   background: #000;
   border: 1px solid var(--green);
