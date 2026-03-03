@@ -105,17 +105,11 @@ async function loadCollections() {
 
 function shortPreview(doc) {
   const clone = { ...doc };
-  // giảm rác UI
-  if (clone.events && Array.isArray(clone.events)) {
-    clone.events = `[${clone.events.length} events]`;
-  }
-  if (clone.paths && typeof clone.paths === "object") {
-    clone.paths = "[paths map]";
-  }
-  return (
-    JSON.stringify(clone).slice(0, 260) +
-    (JSON.stringify(clone).length > 260 ? "..." : "")
-  );
+  if (clone.events && Array.isArray(clone.events)) clone.events = `[${clone.events.length} events]`;
+  if (clone.paths && typeof clone.paths === "object") clone.paths = "[paths map]";
+
+  const s = JSON.stringify(clone);
+  return s.length > 260 ? s.slice(0, 260) + "..." : s;
 }
 
 function renderRows(docs, collectionName) {
