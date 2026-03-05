@@ -1,7 +1,7 @@
 // faceid.js
 
-const API_URL = "http://localhost:3000";
-// const API_URL = "";
+//const API_URL = "http://localhost:3000";
+const API_URL = "";
 
 const guideEl = document.getElementById("guide-text");
 const canvas = document.getElementById("matrix-bg");
@@ -1006,5 +1006,6 @@ function startCameraPipeline() {
     buom.x = Math.min(buom.x, window.innerWidth - 100);
   });
 })();
+
 
 initSystem();
